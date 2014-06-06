@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <!--
+    <parameters>
+        <parameter key="tritoq_tpanel.example.class">Tritoq\Bundle\TpanelBundle\Example</parameter>
+    </parameters>
+
+    <services>
+        <service id="tritoq_tpanel.example" class="%tritoq_tpanel.example.class%">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+    <services>
+        <service id="tritoq_tpanel.vhost.listener" class="Tritoq\Bundle\TpanelBundle\EventListener\VhostListener">
+            <tag name="doctrine.event_listener" event="prePersist"/>
+        </service>
+
+        <service id="tritoq_tpanel.user.listener" class="Tritoq\Bundle\TpanelBundle\EventListener\UserListener">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <tag name="doctrine.event_listener" event="prePersist"/>
+        </service>
+
+        <service id="tritoq_tpanel.shell.listener" class="Tritoq\Bundle\TpanelBundle\EventListener\ShellListener">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <tag name="doctrine.event_listener" event="prePersist"/>
+        </service>
+    </services>
+</container>

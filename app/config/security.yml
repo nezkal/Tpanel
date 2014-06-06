@@ -1,0 +1,40 @@
+security:
+    encoders:
+        Tritoq\Bundle\TpanelBundle\Entity\User: sha512
+
+    role_hierarchy:
+            ROLE_ADMIN:       ROLE_USER
+            ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        in_memory:
+            memory: ~
+
+        tpanel:
+            entity: {class: Tritoq\Bundle\TpanelBundle\Entity\User, property: username}
+
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        tpanel_login:
+            pattern: /tpanel/login
+            security: false
+
+        tpanel_secured:
+            provider: tpanel
+            pattern: /tpanel
+            form_login:
+                check_path: tpanel_check
+                login_path: tpanel_login
+            logout:
+                path: tpanel_logout
+                target: tpanel_login
+
+        default:
+            anonymous: ~
+
+    access_control:
+        - { path: ˆ/tpanel, roles: ROLE_USER }

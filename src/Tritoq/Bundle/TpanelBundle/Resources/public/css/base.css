@@ -1,0 +1,116 @@
+.records_list {
+   margin-top:20px;
+}
+.content {
+    width: calc(100% - 200px);
+    float:left;
+    padding:10px 10px 60px 10px;
+    margin-left: 200px;
+}
+
+body, html {
+    background: #f2f2f2!important;
+    width:100%;
+    height:100%;
+}
+
+.commands {
+    margin-top:30px;
+    margin-bottom:10px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.error {
+    padding:10px;
+}
+
+.record_actions {
+    list-style: none;
+    margin:0;
+    float:right;
+}
+.records_list ul, .record_actions, nav.menu ul {
+    list-style: none;
+    margin:0px!important;
+    -webkit-margin-after:0px !important;
+    -webkit-margin-before:0px !important;
+    -webkit-padding-start:0px !important;
+}
+nav.menu ul {
+    margin-top:-10px!important;
+    position: relative;
+}
+.records_list ul li, .record_actions li {
+    float:left;
+    margin-right: 4px;
+}
+
+nav.menu a.home {
+    color:black;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #363636;
+    display: block;
+}
+nav.menu a.home:hover {
+    color: #0864c1;
+}
+nav.menu {
+    margin:10px 0px 0px 10px;
+}
+nav.menu li a {
+    color: #4b4b4b;
+    padding:5px 10px 5px 10px;
+    display: block;
+    border-bottom: 1px solid #3c3c3c;
+    text-decoration: none;
+    margin-bottom: 1px;
+}
+nav.menu li a:hover, nav.menu li a.selected  {
+    background: #3c3c3c;
+    color: white;
+
+    -webkit-transition: background-color 0.5s linear;
+    -moz-transition: background-color 0.5s linear;
+    -o-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
+}
+
+.form {
+    clear:both;
+}
+
+.left-bar {
+    float:left;
+    background: #2d2d2d;
+    width:200px;
+    min-height: 400px;
+    height: 100%;
+    position: fixed;
+}
+
+.main-content {
+    width:100%;
+    height: 100%;
+}
+
+footer {
+    width: calc(100% - 200px);
+    bottom:0px;
+    position:fixed;
+    height:40px;
+    font-size: 12px;
+    background: white;
+    margin-left: 200px;
+    text-align: right;
+    line-height: 40px;
+    border-top:1px solid #ebebeb;
+
+}
+footer a {
+    color: #d5d5d5;
+}

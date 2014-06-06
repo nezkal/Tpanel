@@ -1,0 +1,26 @@
+{% extends '@TritoqTpanel/layout.html.twig' %}
+
+{% block body %}
+    <h1>Usuários</h1> <br/>
+    <div class="panel panel-info">
+        <div class="panel-heading">Gerenciamento de Usuários</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Adicionar um usuário</label>
+                        <pre>app/console tpanel:user:add</pre>
+                    </div>
+                    <div class="form-group">
+                        <label>Remover um usuário</label>
+                        <pre>app/console tpanel:user:del</pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'TritoqTpanelBundle::layout.html.twig' %}
+
+{% block body -%}
+    {{ parent() }}
+    <h1>Lista de Vhosts</h1>
+
+    <div class="commands">
+        <a class="btn btn-primary" href="{{ path('vhost_new') }}">
+            Novo Vhost
+        </a>
+    </div>
+
+    <table class="records_list table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Usuário</th>
+                <th>Senha</th>
+                <th>Domínio</th>
+                <th>IP</th>
+                <th>E-mail do Admin</th>
+                <th>Data de criação</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('vhost_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.user }}</td>
+                <td>{{ entity.password }}</td>
+                <td>{{ entity.domain }}</td>
+                <td>{{ entity.ip }}</td>
+                <td>{{ entity.adminEmail }}</td>
+                <td>{{ entity.dateCreated.format('d/m/Y H:i:s')}}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a class="btn btn-info btn-sm" href="{{ path('vhost_show', { 'id': entity.id }) }}">visualizar</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-warning btn-sm" href="{{ path('vhost_edit', { 'id': entity.id }) }}">editar</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

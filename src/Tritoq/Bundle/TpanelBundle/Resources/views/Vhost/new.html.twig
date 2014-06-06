@@ -1,0 +1,10 @@
+{% extends 'TritoqTpanelBundle::layout.html.twig' %}
+
+{% block body%}
+    {{ parent() }}
+    <h1>Novo Vhost</h1>
+    {{ include('TritoqTpanelBundle:Default:record-actions.html.twig', {'route': 'vhost'}) }}
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+        {{ include('TritoqTpanelBundle:Vhost:form.html.twig', {'form': form, 'label': 'Inserir'}) }}
+    {{ form_end(form) }}
+{% endblock %}

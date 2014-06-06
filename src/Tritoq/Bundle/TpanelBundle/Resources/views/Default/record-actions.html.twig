@@ -1,0 +1,26 @@
+<ul class="record_actions">
+    <li>
+        <a href="{{ path(route) }}" class="btn btn-info btn-sm">
+            Voltar para lista
+        </a>
+    </li>
+
+    {% if entity.id is not null %}
+        {% if hideEdit is not defined %}
+            <li>
+                <a class="btn btn-warning btn-sm" href="{{ path(route ~ '_edit', { 'id': entity.id }) }}">
+                    Editar
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if delete_form is defined and entity is defined%}
+        <li>
+            {{ form_start(delete_form) }}
+                {{ form_row(delete_form.submit,  {'label': 'Deletar', 'attr': {'class': 'btn btn-danger btn-sm' }}) }}
+            {{ form_end(delete_form) }}
+        </li>
+        {% endif %}
+    {% endif %}
+</ul>

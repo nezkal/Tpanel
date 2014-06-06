@@ -1,0 +1,4 @@
+tritoq_tpanel:
+    resource: "@TritoqTpanelBundle/Resources/config/routing.xml"
+    prefix:   /
+
