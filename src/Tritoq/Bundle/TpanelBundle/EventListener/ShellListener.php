@@ -33,8 +33,6 @@ class ShellListener
     private function make(Vhost $vhost)
     {
         $apache = $this->container->getParameter('tpanel.apachedir');
-
-
         $kernel = $this->container->get('kernel');
 
         // Step1 copy the vhosts for de apache conf
@@ -60,27 +58,27 @@ class ShellListener
         $ret_useradd = 0;
         $ret_passwd = 0;
 
-        passthru('useradd -m ' . $user_name, $ret_useradd);
+        passthru('sudo useradd -m ' . $user_name, $ret_useradd);
 
         if ($ret_useradd) {
             throw new \Exception("Something wrong with useradd, code: " . $ret_useradd);
         }
 
-        passthru('echo "' . $user_name . ':' . $user_pass . '" | chpasswd', $ret_passwd);
+        passthru('sudo echo "' . $user_name . ':' . $user_pass . '" | chpasswd', $ret_passwd);
 
         if ($ret_passwd) {
-            echo exec('userdel ' . $user_name);
+            echo exec('sudo userdel ' . $user_name);
             throw new \Exception("Something wrong with chpasswd, code: " . $ret_useradd);
         } else {
             $group = $this->container->getParameter('tpanel.webgroup');
-            passthru('usermod -a -G ' . $group . ' ' . $user_name);
+            passthru('sudo usermod -a -G ' . $group . ' ' . $user_name);
         }
 
 
         $logger = $this->container->get('logger');
 
         $apacheReload = 0;
-        passthru('service apache2 reload', $apacheReload);
+        passthru('sudo service apache2 reload', $apacheReload);
 
         $logger->addInfo($logger);
     }
