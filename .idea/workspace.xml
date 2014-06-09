@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2849f760-9bb4-4937-bce4-1d784abaadc0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/template/nginx.template.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/ShellListener.php" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/ShellListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Entity/Vhost.php" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Entity/Vhost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/VhostListener.php" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/VhostListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Form/VhostType.php" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Form/VhostType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/form.html.twig" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/form.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/config/services.xml" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/config/services.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/show.html.twig" afterPath="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tpanel.iws" />
@@ -47,15 +39,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="79" column="19" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1275">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="TritoqTpanelExtension.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/DependencyInjection/TritoqTpanelExtension.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -74,10 +57,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Vhost.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Vhost.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Entity/Vhost.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="63" column="45" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.57347673" vertical-offset="550" max-vertical-offset="4245">
+                <state line="25" column="48" selection-start="582" selection-end="582" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="4245">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="security.yml" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.3814433" vertical-offset="78" max-vertical-offset="735">
                   <folding />
                 </state>
               </provider>
@@ -197,7 +189,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/UserListener.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/Security.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/login.html.twig" />
@@ -228,6 +219,7 @@
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/form.html.twig" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Entity/Vhost.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
       </list>
     </option>
   </component>
@@ -978,7 +970,11 @@
       <created>1402082965139</created>
       <updated>1402082965139</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sudo support">
+      <created>1402338924839</created>
+      <updated>1402338924839</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1132,11 +1128,6 @@
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="72" selection-start="946" selection-end="946" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/login.html.twig">
@@ -1368,7 +1359,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Entity/Vhost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="45" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.57347673" vertical-offset="550" max-vertical-offset="4245">
+        <state line="25" column="48" selection-start="582" selection-end="582" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="4245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.3814433" vertical-offset="78" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
