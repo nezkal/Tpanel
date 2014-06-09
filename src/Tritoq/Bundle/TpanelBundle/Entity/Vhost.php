@@ -61,7 +61,7 @@ class Vhost
 
     /**
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", unique=true)
      * @NotBlank()
      */
     private $domain;
@@ -79,6 +79,13 @@ class Vhost
      */
     private $vhost;
 
+
+    /**
+     * @var string
+     * @ORM\Column(type="text")
+     */
+    private $nginx;
+
     /**
      * @var \DateTime
      * @ORM\Column(type="datetime")
@@ -88,6 +95,25 @@ class Vhost
     function __construct()
     {
         $this->dateCreated = new \DateTime('now');
+    }
+
+    /**
+     * @param string $nginx
+     *
+     * @return $this
+     */
+    public function setNginx($nginx)
+    {
+        $this->nginx = $nginx;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNginx()
+    {
+        return $this->nginx;
     }
 
     /**

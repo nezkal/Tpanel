@@ -58,20 +58,16 @@ class ShellListener
         $ret_useradd = 0;
         $ret_passwd = 0;
 
-        passthru('sudo useradd -m ' . $user_name, $ret_useradd);
+        shell_exec('sudo useradd -m ' . $user_name);
 
-        if ($ret_useradd) {
-            throw new \Exception("Something wrong with useradd, code: " . $ret_useradd);
-        }
-
-        passthru('sudo echo "' . $user_name . ':' . $user_pass . '" | chpasswd', $ret_passwd);
+        shell_exec('sudo echo "' . $user_name . ':' . $user_pass . '" | chpasswd');
 
         if ($ret_passwd) {
             echo exec('sudo userdel ' . $user_name);
             throw new \Exception("Something wrong with chpasswd, code: " . $ret_useradd);
         } else {
             $group = $this->container->getParameter('tpanel.webgroup');
-            passthru('sudo usermod -a -G ' . $group . ' ' . $user_name);
+            shell_exec('sudo usermod -a -G ' . $group . ' ' . $user_name);
         }
 
 

@@ -45,7 +45,10 @@ class VhostListener
 
         if ($entity instanceof Vhost) {
             $vhost = $entity->getVhost();
+            $nginx = $entity->getNginx();
+
             $entity->setVhost($this->replaceVariables($entity, $vhost));
+            $entity->setNginx($this->replaceVariables($entity, $nginx));
         }
     }
 

@@ -29,11 +29,11 @@
             <tag name="doctrine.event_listener" event="prePersist"/>
         </service>
 
-        <service id="tritoq_tpanel.shell.listener" class="Tritoq\Bundle\TpanelBundle\EventListener\ShellListener">
+        <!--<service id="tritoq_tpanel.shell.listener" class="Tritoq\Bundle\TpanelBundle\EventListener\ShellListener">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
             <tag name="doctrine.event_listener" event="prePersist"/>
-        </service>
+        </service>-->
     </services>
 </container>

@@ -3,6 +3,11 @@
 <div class="form-group"> {{ form_row(form.domain) }}</div>
 <div class="form-group"> {{ form_row(form.ip) }}</div>
 <div class="form-group"> {{ form_row(form.adminEmail) }}</div>
-<div class="form-group"> {{ form_row(form.vhost) }} </div>
+<div class="col-md-6">
+    <div class="form-group"> {{ form_row(form.vhost) }} </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group"> {{ form_row(form.nginx) }} </div>
+</div>
 <div class="form-group">{{ form_row(form.submit, {'label': label ,  'attr' : {'class': 'btn btn-success'}}) }}</div>
 {{ form_rest(form) }}

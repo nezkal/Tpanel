@@ -7,6 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Tritoq\Bundle\TpanelBundle\Entity\Vhost;
 use Tritoq\Bundle\TpanelBundle\Form\VhostType;
 
@@ -96,6 +98,14 @@ class VhostController extends Controller
         return $template;
     }
 
+    private function getNginxTemplate()
+    {
+        $kernel = $this->get('kernel');
+        $file = $kernel->getRootDir() . '/template/nginx.template.txt';
+        $template = file_get_contents($file);
+        return $template;
+    }
+
     /**
      * Displays a form to create a new Vhost entity.
      *
@@ -107,6 +117,7 @@ class VhostController extends Controller
     {
         $entity = new Vhost();
         $entity->setVhost($this->getVhostTemplate());
+        $entity->setNginx($this->getNginxTemplate());
 
         if (isset($_SERVER['SERVER_ADDR'])) {
             $entity->setIp($_SERVER['SERVER_ADDR']);
@@ -119,6 +130,38 @@ class VhostController extends Controller
             'entity' => $entity,
             'form' => $form->createView(),
         );
+    }
+
+    /**
+     *
+     * @Route("/download/{domain}", defaults={"_format"="txt"})
+     * @Method("GET")
+     */
+    public function vhostAction($domain)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $vhost = $em->getRepository("TritoqTpanelBundle:Vhost")->findOneByDomain($domain);
+        if (!$vhost) {
+            throw new NotFoundHttpException('Domínio não encontrado');
+        }
+
+        return new Response($vhost->getVhost());
+    }
+
+    /**
+     *
+     * @Route("/download/{domain}/nginx", defaults={"_format"="txt"})
+     * @Method("GET")
+     */
+    public function nginxAction($domain)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $vhost = $em->getRepository("TritoqTpanelBundle:Vhost")->findOneByDomain($domain);
+        if (!$vhost) {
+            throw new NotFoundHttpException('Domínio não encontrado');
+        }
+
+        return new Response($vhost->getNginx());
     }
 
     /**

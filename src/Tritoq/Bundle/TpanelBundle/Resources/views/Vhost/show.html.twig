@@ -33,6 +33,10 @@
             <th>Vhost</th>
             <td><pre>{{ entity.vhost }}</pre></td>
         </tr>
+        <tr>
+            <th>Nginx</th>
+            <td><pre>{{ entity.nginx }}</pre></td>
+        </tr>
         </tbody>
     </table>
     {{ include('TritoqTpanelBundle:Default:record-actions.html.twig', {'entity': entity, 'route': 'vhost', 'delete_form': delete_form}) }}
