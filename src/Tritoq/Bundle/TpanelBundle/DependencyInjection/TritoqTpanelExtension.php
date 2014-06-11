@@ -27,5 +27,6 @@ class TritoqTpanelExtension extends Extension
 
         $container->setParameter('tpanel.apachedir', $config['apachedir']);
         $container->setParameter('tpanel.webgroup', $config['webgroup']);
+        $container->setParameter('tpanel.nodes', $config['nodes']);
     }
 }

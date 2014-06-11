@@ -78,3 +78,5 @@ swiftmailer:
 tritoq_tpanel:
     apachedir: "/etc/apache2"
     webgroup: "web"
+    nodes:
+      - {ip: "50.116.30.149", host: "node1.tritoq.com"}

@@ -74,8 +74,11 @@ class VhostController extends Controller
      */
     private function createCreateForm(Vhost $entity)
     {
+        $type = new VhostType();
+        $type->setNodes($this->container->getParameter('tpanel.nodes'));
+
         $form = $this->createForm(
-            new VhostType(),
+            $type,
             $entity,
             array(
                 'action' => $this->generateUrl('vhost_create'),
@@ -225,8 +228,12 @@ class VhostController extends Controller
      */
     private function createEditForm(Vhost $entity)
     {
+        $type = new VhostType();
+        $type->setNodes($this->container->getParameter('tpanel.nodes'));
+
+
         $form = $this->createForm(
-            new VhostType(),
+            $type,
             $entity,
             array(
                 'action' => $this->generateUrl('vhost_update', array('id' => $entity->getId())),
