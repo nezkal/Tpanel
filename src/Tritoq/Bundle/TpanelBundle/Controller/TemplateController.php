@@ -27,7 +27,11 @@ class TemplateController extends Controller
         //
         $vhost = file_get_contents($file);
 
-        return array('vhost' => $vhost);
+        $file = $kernel->getRootDir() . '/template/nginx.template.txt';
+        //
+        $nginx = file_get_contents($file);
+
+        return array('vhost' => $vhost, 'nginx' => $nginx);
     }
 
     /**
@@ -39,11 +43,18 @@ class TemplateController extends Controller
 
 
         $vhost = $this->get('request_stack')->getCurrentRequest()->get('vhost');
+        $nginx = $this->get('request_stack')->getCurrentRequest()->get('nginx');
 
         if (!empty($vhost)) {
             $dir = $this->get('kernel')->getRootDir() . '/template';
-            copy($dir . '/vhost.template.txt' , $dir . '/' . time() . '.vhost.template.txt');
+            copy($dir . '/vhost.template.txt', $dir . '/' . time() . '.vhost.template.txt');
             file_put_contents($dir . '/vhost.template.txt', $vhost);
+        }
+
+        if (!empty($nginx)) {
+            $dir = $this->get('kernel')->getRootDir() . '/template';
+            copy($dir . '/nginx.template.txt', $dir . '/' . time() . '.nginx.template.txt');
+            file_put_contents($dir . '/nginx.template.txt', $nginx);
         }
 
         return $this->redirect($this->generateUrl('templates'));

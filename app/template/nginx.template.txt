@@ -2,12 +2,12 @@ server {
    listen {$ip}:80;
 
    root /var/www/vhosts/{$domain}/public;
-   server_name {$domain};
+   server_name {$domain} www.{$domain};
 
    index index.html index.htm index.php app.php;
 
-   access_log /var/www/vhosts/{$domain}/logs/access_log.log;
-   error_log /var/www/vhosts/{$domain}/logs/error_log.log;
+   access_log /var/www/vhosts/{$domain}/logs/nginx.access.log;
+   error_log /var/www/vhosts/{$domain}/logs/nginx.error.log;
 
    location / {
        try_files $uri $uri /app.php/$query_string /index.php/$query_string @backend;
@@ -29,6 +29,14 @@ server {
        proxy_set_header Host $host;
        proxy_pass http://127.0.0.1:8080;
    }
+
+   location ~* \.(?:ico|css|js|gif|jpe?g|png|swf)$ {
+        # Some basic cache-control for static files to be sent to the browser
+        expires max;
+        add_header Pragma public;
+        add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+    }
+
 
    # if you don't like seeing all the errors for missing favicon.ico in root
    location = /favicon.ico { access_log off; log_not_found off; }

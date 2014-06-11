@@ -2,23 +2,37 @@
 
 {% block body %}
     <h1>Editar Templates</h1> <br/>
-    <div class="panel panel-info">
-        <div class="panel-heading">Vhost Atual</div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-6"><pre>{{ vhost }}</pre></div>
-                <div class="col-md-6">
-                    <form action="{{ path('template.save') }}" method="post">
-                        <div class="form-group">
-                            <label for="vhost">Editar Template Vhost</label>
-                            <textarea id="vhost" name="vhost" class="form-control" rows="35">{{ vhost }}</textarea>
-                        </div>
-                        <div class="form-group"><button type="submit" class="btn btn-success">Salvar</button></div>
-                    </form>
+
+        <form action="{{ path('template.save') }}" method="post">
+        <div class="panel panel-info">
+            <div class="panel-heading">Vhost Atual</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6"><pre>{{ vhost }}</pre></div>
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="vhost">Editar Template Vhost</label>
+                                <textarea id="vhost" name="vhost" class="form-control" rows="38">{{ vhost }}</textarea>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Nginx Atual</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6"><pre>{{ nginx }}</pre></div>
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nginx">Editar Template Nginx</label>
+                                <textarea id="nginx" name="nginx" class="form-control" rows="38">{{ nginx }}</textarea>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="form-group"><button type="submit" class="btn btn-success">Salvar</button></div>
+        </form>
 
-
-    </div>
 {% endblock %}
