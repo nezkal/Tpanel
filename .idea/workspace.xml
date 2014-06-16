@@ -25,7 +25,7 @@
     <favorites_list name="tpanel" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.20833333">
       <split-first>
         <leaf>
           <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
@@ -95,13 +95,13 @@
           </file>
           <file leaf-file-name="vhost.template.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/template/vhost.template.txt">
-              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state line="35" column="35" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="735">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -117,7 +117,7 @@
           <file leaf-file-name="VhostController.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="78" column="0" selection-start="2101" selection-end="2101" vertical-scroll-proportion="-0.14457831" vertical-offset="1170" max-vertical-offset="4830">
+                <state line="81" column="20" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.02097902" vertical-offset="1080" max-vertical-offset="4830">
                   <folding />
                 </state>
               </provider>
@@ -148,7 +148,7 @@
           <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Template/index.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="49" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="645">
+                <state line="27" column="49" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="645">
                   <folding />
                 </state>
               </provider>
@@ -157,7 +157,16 @@
           <file leaf-file-name="config.yml" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/config/config.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="83" column="42" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.8933649" vertical-offset="491" max-vertical-offset="1335">
+                <state line="84" column="57" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.91573036" vertical-offset="445" max-vertical-offset="1350">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="routing.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/config/routing.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
                   <folding />
                 </state>
               </provider>
@@ -193,10 +202,8 @@
           <file leaf-file-name="TemplateController.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/TemplateController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="66" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-30.208334" vertical-offset="85" max-vertical-offset="975">
-                  <folding>
-                    <element signature="e#112#172#0" expanded="true" />
-                  </folding>
+                <state line="56" column="66" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1005">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -268,6 +275,7 @@
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/DependencyInjection/TritoqTpanelExtension.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php" />
         <option value="$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Form/VhostType.php" />
+        <option value="$PROJECT_DIR$/../14bis/sitemap.xml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
       </list>
     </option>
@@ -304,6 +312,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -972,7 +981,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1035,7 +1043,11 @@
       <created>1402517046049</created>
       <updated>1402517046049</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Server Manager">
+      <created>1402939175507</created>
+      <updated>1402939175507</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1057,12 +1069,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -1090,11 +1102,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="19" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1275">
@@ -1131,13 +1138,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/template/vhost.template.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="35" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="720">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/VhostListener.php">
@@ -1163,11 +1170,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24045" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -1213,11 +1220,6 @@
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Default/user.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="56" selection-start="651" selection-end="651" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/config/routing.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Security/login.html.twig">
@@ -1285,13 +1287,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/template/vhost.template.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="35" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="735">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/EventListener/VhostListener.php">
@@ -1340,7 +1342,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/VhostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2101" selection-end="2101" vertical-scroll-proportion="-0.14457831" vertical-offset="1170" max-vertical-offset="4830">
+        <state line="81" column="20" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.02097902" vertical-offset="1080" max-vertical-offset="4830">
           <folding />
         </state>
       </provider>
@@ -1355,13 +1357,6 @@
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Vhost/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="34" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Template/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
@@ -1389,10 +1384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Controller/TemplateController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="66" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-30.208334" vertical-offset="85" max-vertical-offset="975">
-          <folding>
-            <element signature="e#112#172#0" expanded="true" />
-          </folding>
+        <state line="56" column="66" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1005">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,9 +1399,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/config/routing.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../14bis/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="70" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.38764045" vertical-offset="0" max-vertical-offset="890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tritoq/Bundle/TpanelBundle/Resources/views/Template/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="49" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="42" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.8933649" vertical-offset="491" max-vertical-offset="1335">
+        <state line="84" column="57" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.91573036" vertical-offset="445" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
