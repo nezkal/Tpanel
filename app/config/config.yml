@@ -80,3 +80,5 @@ tritoq_tpanel:
     webgroup: "web"
     nodes:
       - {ip: "50.116.30.149", host: "node1.tritoq.com"}
+      - {ip: "23.239.29.76", host: "node1.tritoq.com (2)"}
+      - {ip: "23.239.29.175", host: "node2.tritoq.com"}
