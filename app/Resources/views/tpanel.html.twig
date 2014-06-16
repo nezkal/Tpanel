@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Tpanel">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Tpanel Vhosts Configuration{% endblock %}</title>
@@ -17,5 +17,6 @@
         </footer>
         {% block javascripts %}{% endblock %}
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="application/javascript"></script>
+        <script src="{{ asset('bundles/tritoqtpanel/js/tpanel.js') }}" type="text/javascript"></script>
     </body>
 </html>

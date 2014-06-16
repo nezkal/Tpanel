@@ -1,0 +1,10 @@
+{% extends 'TritoqTpanelBundle::layout.html.twig' %}
+
+{% block body%}
+    {{ parent() }}
+    <h1>Novo E-mail</h1>
+    {{ include('TritoqTpanelBundle:Default:record-actions.html.twig', {'route': 'email'}) }}
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+    {{ include('TritoqTpanelBundle:Emails:form.html.twig', {'form': form, 'label': 'Inserir'}) }}
+    {{ form_end(form) }}
+{% endblock %}
