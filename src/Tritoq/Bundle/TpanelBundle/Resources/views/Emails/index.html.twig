@@ -1,0 +1,53 @@
+{% extends 'TritoqTpanelBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Emails list</h1>
+
+    <div ng-controller="Emails">
+        <div class="commands">
+            <a class="btn btn-primary" href="{{ path('email_new') }}">
+                Novo Email
+            </a>
+        </div>
+
+        <input ng-model="searchText" class="form-control" placeholder="Buscar">
+
+        <table class="records_list table table-striped" id="searchTextResults">
+            <thead>
+            <tr>
+                <th>
+                    <a href="" ng-click="predicate = 'id'; reverse=!reverse">Id</a>
+                </th>
+                <th>
+                    <a href="" ng-click="predicate = 'email'; reverse=!reverse">Email</a>
+                </th>
+                <th>
+                    <a href="" ng-click="predicate = 'password'; reverse=!reverse">Password</a></th>
+                <th>
+                    <a href="" ng-click="predicate = 'dominio'; reverse=!reverse">Dominio</a></th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="email in emails | orderBy:predicate:reverse | filter:searchText">
+                <td>[[ email.id ]]</td>
+                <td>[[ email.email ]]</td>
+                <td>[[ email.password ]]</td>
+                <td>[[ email.dominio ]]</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a class="btn btn-info btn-sm"
+                               href="{{ path('email_show', { 'id': '[[ email.id ]]' }) | url_decode }}">visualizar</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-info btn-sm"
+                               href="{{ path('email_edit', { 'id': '[[ email.id ]]' }) | url_decode }}">editar</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

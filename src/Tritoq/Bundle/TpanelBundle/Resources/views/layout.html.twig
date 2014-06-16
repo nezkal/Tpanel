@@ -18,6 +18,7 @@
         <ul>
             <li><a class="{{ 'vhost' in app.request.get('_route') ? 'selected' : 'none' }}" href="{{ path('vhost') }}">Vhosts</a></li>
             <li><a class="{{ 'template' in app.request.get('_route') ? 'selected' : 'none' }}" href="{{ path('templates') }}">Templates</a></li>
+            <li><a class="{{ 'email' in app.request.get('_route') ? 'selected' : 'none' }}" href="{{ path('email') }}">Emails</a></li>
             <li><a class="{{ 'user' in app.request.get('_route') ? 'selected' : 'none' }}" href="{{ path('user') }}">Usuários</a></li>
             <li><a  href="{{ path('tpanel_logout') }}">Sair</a></li>
         </ul>

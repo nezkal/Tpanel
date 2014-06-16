@@ -1,0 +1,13 @@
+{% extends 'TritoqTpanelBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Editar</h1>
+
+    {{ include('TritoqTpanelBundle:Default:record-actions.html.twig', {'entity': entity, 'route': 'email', 'delete_form': delete_form, 'hideEdit': true}) }}
+
+    {{ form_start(edit_form, {'attr': {'class': 'form'}}) }}
+        {{ include('TritoqTpanelBundle:Emails:form.html.twig', {'form': edit_form, 'label': 'Atualizar'}) }}
+    {{ form_end(edit_form) }}
+
+
+{% endblock %}
