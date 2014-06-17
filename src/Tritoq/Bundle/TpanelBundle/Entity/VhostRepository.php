@@ -3,6 +3,7 @@
 namespace Tritoq\Bundle\TpanelBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
 
 /**
  * VhostRepository
@@ -12,9 +13,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class VhostRepository extends EntityRepository
 {
-    public function getByIdDesc () {
+    public function getByIdDesc($isarray = false)
+    {
         $qb = $this->createQueryBuilder('t');
-        $qb->orderBy('t.id', 'desc');
+        $qb->select("t.id, t.user, t.password, t.domain, t.ip, t.adminEmail, t.dateCreated")
+            ->orderBy('t.id', 'desc');
+
+        if ($isarray === true) {
+            return $qb->getQuery()->getResult(Query::HYDRATE_SCALAR);
+        }
+
         return $qb->getQuery()->getResult();
     }
 }
