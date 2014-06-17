@@ -2,6 +2,7 @@
 
 namespace Tritoq\Bundle\TpanelBundle\Controller;
 
+use Doctrine\ORM\Query;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -34,26 +35,16 @@ class EmailsController extends Controller
     /**
      * @Route("/get.json", name="emails_get", defaults={"_format"="json"})
      * @Method("GET")
-     * @Template()
      */
     public function getAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('TritoqTpanelBundle:Emails')->findAll();
+        $entities = $em->getRepository('TritoqTpanelBundle:Emails')->createQueryBuilder('e')->getQuery()->getResult(
+            Query::HYDRATE_ARRAY
+        );
 
-        $data = array();
-
-        foreach ($entities as $email) {
-            $data[] = array(
-                'id' => $email->getId(),
-                'email' => $email->getEmail(),
-                'password' => $email->getPassword(),
-                'dominio' => $email->getDominio()
-            );
-        }
-
-        return new JsonResponse($data);
+        return new JsonResponse($entities);
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace Tritoq\Bundle\TpanelBundle\Controller;
 
+use Doctrine\ORM\Event\LifecycleEventArgs;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -29,13 +31,19 @@ class VhostController extends Controller
      */
     public function indexAction()
     {
+        return array();
+    }
+
+    /**
+     * @Route("/get.json", name="vhost_get", defaults={"_format"="json"})
+     * @Method("GET")
+     */
+    public function getAction()
+    {
         $em = $this->getDoctrine()->getManager();
+        $entities = $em->getRepository('TritoqTpanelBundle:Vhost')->getByIdDesc(true);
 
-        $entities = $em->getRepository('TritoqTpanelBundle:Vhost')->getByIdDesc();
-
-        return array(
-            'entities' => $entities,
-        );
+        return new JsonResponse($entities);
     }
 
     /**

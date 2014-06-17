@@ -279,4 +279,9 @@ class Vhost
     {
         return $this->getAdminEmail();
     }
+
+    public function getTeste()
+    {
+        return 'ok';
+    }
 }
