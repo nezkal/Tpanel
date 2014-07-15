@@ -82,4 +82,4 @@ tritoq_tpanel:
       - {ip: "50.116.30.149", host: "node1.tritoq.com"}
       - {ip: "23.239.29.76", host: "(2) node1.tritoq.com"}
       - {ip: "23.239.29.175", host: "node2.tritoq.com"}
-      - {ip: "23.239.29.223", host: "sandbox.tritoq.com"}
+      - {ip: "96.126.118.37", host: "sandbox.tritoq.com"}
